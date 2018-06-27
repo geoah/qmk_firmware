@@ -35,6 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 7
 
 // wiring of each half
+// #define MATRIX_ROW_PINS { F4, D7, B5, B4 } // for my right side fourier which I fucked up
 #define MATRIX_ROW_PINS { F4, D7, E6, B4 }
 #define MATRIX_COL_PINS { F5, F6, F7, B1, B3, B2, B6 }
 
