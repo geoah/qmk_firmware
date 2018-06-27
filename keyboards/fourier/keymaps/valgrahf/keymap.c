@@ -1,4 +1,6 @@
-#include QMK_KEYBOARD_H
+#include "fourier.h"
+#include "action_layer.h"
+#include "eeconfig.h"
 
 extern keymap_config_t keymap_config;
 
@@ -32,9 +34,9 @@ enum custom_keycodes {
 #define KC_RVAD RGB_VAD
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_BASE] = LAYOUT_kc(
+  [_BASE] = KC_KEYMAP(
  //,----+----+----+----+----+----|----+----+----+----+----+----+----.
-    TAB , Q  , W  , E  , R  , T  , Y  , U  , I  , O  , P  , DEL,BSPC,
+    TAB , Q  , W  , E  , R  , T  , Y  , U  , I  , O  , P  , EQL,BSPC,
  //|----`----`----`----`----`----|----`----`----`----`----`----`----|
     ESC  , A  , S  , D  , F  , G  , H  , J  , K  , L  ,QUOT,  SCLN  ,
  //|-----`----`----`----`----`----|----`----`----`----`----`--------|
@@ -44,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //`-----+----+-----+-------------|--------+-----+-----+-----+------'
   ),
 
-  [_FN1] = LAYOUT_kc(
+ [_FN1] = KC_KEYMAP(
  //,----+----+----+----+----+----|----+----+----+----+----+----+----.
     GRV , 1  , 2  , 3  , 4  , 5  , 6  , 7  , 8  , 9  , 0  ,    ,    ,
  //|----`----`----`----`----`----|----`----`----`----`----`----`----|
@@ -56,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //`-----+----+-----+-------------|--------+-----+-----+-----+------'
   ),
 
-  [_FN2] = LAYOUT_kc(
+  [_FN2] = KC_KEYMAP(
  //,----+----+----+----+----+----|----+----+----+----+----+----+----.
     TILD,EXLM, AT ,HASH,DLR ,PERC,CIRC,AMPR,ASTR,LPRN,RPRN,    ,    ,
  //|----`----`----`----`----`----|----`----`----`----`----`----`----|
@@ -64,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //|-----`----`----`----`----`----|----`----`----`----`----`--------|
            ,RHUD,RSAD,RVAD,    ,    ,VOLU,VOLD,    ,    , UP ,      ,
  //|-------`----`----`----`----`----|----`----`----`----`----`------|
-         ,RTOG,RMOD ,    ,        ,        ,     , LEFT, DOWN, RIGHT
+         ,RTOG,RMOD ,    ,        ,        ,     , LEFT, DOWN, RIGHT 
  //`-----+----+-----+-------------|--------+-----+-----+-----+------'
   )
 
