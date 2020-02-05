@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         Split Infinitive
 #define DESCRIPTION     QMK keyboard firmware for the Split Infinitive PCB
 
-//#define IS_SPLIT
+// #define IS_SPLIT
 
 /* key matrix size */
 #ifdef IS_SPLIT
@@ -39,7 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define MATRIX_ROWS 5
     #define MATRIX_COLS 12
     #define MATRIX_ROW_PINS { F4, F5, B5, B4, E6 }
-    #define MATRIX_COL_PINS { B3, B2, B6, D4, C6, D7, D2, D1, D0, B1, F7, F6 }
+    #define MATRIX_COL_PINS { D2, D1, D0, B1, F7, F6, B3, B2, B6, D4, C6, D7 }
     #define UNUSED_PINS { D3 }
 #endif
 
